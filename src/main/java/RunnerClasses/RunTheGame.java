@@ -15,9 +15,7 @@ import io.cucumber.testng.CucumberOptions;
         features = {"src/test/java/FeatureFiles"},
         glue = {"Stepdef"},
         dryRun = false
-
 )
-
 public class RunTheGame extends AbstractTestNGCucumberTests {
 
 }

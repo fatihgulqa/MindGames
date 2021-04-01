@@ -1,7 +1,6 @@
 package MainClasses;
 
 public class Card {
-
     private final int rank;
     private final int suit;
 
@@ -25,6 +24,7 @@ public class Card {
     public final static int JACK = 11;
     public final static int QUEEN = 12;
     public final static int KING = 13;
+
 
     public Card(int rank, int suit) {
         assert isValidRank(rank);
@@ -78,9 +78,6 @@ public class Card {
             case KING:
                 return "King";
             default:
-                //Handle an illegal argument.  There are generally two
-                //ways to handle invalid arguments, throwing an exception
-                //(see the section on Handling Exceptions) or return null
                 return null;
         }
     }

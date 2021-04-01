@@ -36,6 +36,7 @@
             <version>6.4.0</version>
         </dependency>
 
+<!--We need this dependency for Looger. It is better than TestNG ITListener -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -67,6 +68,8 @@
                     </includes>
                 </configuration>
             </plugin>
+
+<!--This Plug-in is used to generate the report            -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>

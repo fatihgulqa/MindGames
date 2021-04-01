@@ -61,17 +61,17 @@ public class PlayGameSteps {
 
     @Then("^Deal (\\d+) times more and check if you will get \"([^\"]*)\" message$")
     public void deal_times_and_check_if_you_will_get_message(int numberOfDeals, String arg2) {
-        int b = game.getCurrentCard();
+        int b = game.getCurrentCard(); //Get the last value of currentCard
         for (int i = b; i < (numberOfDeals+b); i++) {
             if (i > 52)  {  // If more then 52 card was dealt, tmpCard must be null
                 try {
-                     Assert.assertNull(tmpCard);
+                     Assert.assertNull(tmpCard); //Check if the card is null
                 } catch (AssertionError ae) {
                     logger.error("Assertion error {}", ae.getMessage());
                 }
             break;
             }
-            tmpCard=game.deal();  // Assign the dealt card to Temporary card
+            tmpCard=game.deal();  // Deal a card and assign it to Temporary card
         }
     }
 }
