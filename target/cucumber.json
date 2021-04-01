@@ -1,0 +1,149 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-04-01T02:37:42.337Z",
+        "line": 3,
+        "name": "Creating a deck of 52 cards",
+        "description": "",
+        "id": "testing-game-cards;creating-a-deck-of-52-cards",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 41000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Create deck",
+            "match": {
+              "location": "Stepdef.PlayGameSteps.create_deck()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Print out the deck",
+            "match": {
+              "location": "Stepdef.PlayGameSteps.print_out_the_deck()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Shuffle the deck 100 times",
+            "match": {
+              "arguments": [
+                {
+                  "val": "100",
+                  "offset": 17
+                }
+              ],
+              "location": "Stepdef.PlayGameSteps.shuffle_the_deck_times(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Print out the shuffled deck",
+            "match": {
+              "location": "Stepdef.PlayGameSteps.print_out_the_shuffled_deck()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Compare before and after shuffle deck",
+            "match": {
+              "location": "Stepdef.PlayGameSteps.compare_before_and_after_shuffle_deck()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-01T02:37:42.407Z",
+        "line": 10,
+        "name": "Deal some cards from deck",
+        "description": "",
+        "id": "testing-game-cards;deal-some-cards-from-deck",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "For 3 player, deal cards",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 4
+                }
+              ],
+              "location": "Stepdef.PlayGameSteps.for_player_deal_cards(int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Check if they are same with the shuffled deck",
+            "match": {
+              "location": "Stepdef.PlayGameSteps.check_if_they_are_same_with_the_shuffled_deck()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Deal 50 times more and check if you will get \"Out of Card\" message",
+            "match": {
+              "arguments": [
+                {
+                  "val": "50",
+                  "offset": 5
+                },
+                {
+                  "val": "Out of Card",
+                  "offset": 46
+                }
+              ],
+              "location": "Stepdef.PlayGameSteps.deal_times_and_check_if_you_will_get_message(int,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Testing game cards",
+    "description": "",
+    "id": "testing-game-cards",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/FeatureFiles/LetsPlayGame.feature",
+    "tags": []
+  }
+]
